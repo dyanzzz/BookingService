@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_promotions_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PromotionsDetail">
+
+    <ImageView
+        android:id="@+id/img_promotion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img_promotion"
+        android:background="@color/cardview_shadow_start_color"
+        android:padding="5dp"
+        android:textColor="@color/cardview_light_background"
+        android:textStyle="bold" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/img_promotion"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/deskripsi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/editTextBackground" />
+            </LinearLayout>
+
+        </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <ImageView
+        android:id="@+id/visitUs"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/app_name"
+        android:onClick="btn_linkPromotions"
+        android:src="@mipmap/hyundai_h_blue" />
+
+    <TextView
+        android:id="@+id/tvVisitUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="18dp"
+        android:layout_toStartOf="@+id/visitUs"
+        android:onClick="btn_linkPromotions"
+        android:text="@string/visit_us"
+        android:textAllCaps="false"
+        android:textColor="@color/colorLine"
+        android:textStyle="bold|italic" />
+
+</RelativeLayout>

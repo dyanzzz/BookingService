@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--title toolbar-->
+    <string name="hmi">PT Hyundai Mobil Indonesia</string>
+    <string name="him">PT Hyundai Indonesia Motor</string>
+    <string name="app_name">Hyundai Mobil Apps</string>
+    <string name="form_booking_service">Form Booking Service</string>
+    <string name="list_booking">List Booking</string>
+    <string name="promotions_hyundai">Promotions_hyundai</string>
+    <string name="list_dealer">Dealer Hyundai</string>
+    <string name="promotions">Promotion</string>
+    <string name="promotions_detail">Promotion Detail</string>
+    <string name="history_booking">History Booking</string>
+    <string name="history_booking_detail">History Booking Detail</string>
+    <string name="news">News</string>
+    <string name="detail_news">Detail News</string>
+    <string name="service_history">Service History</string>
+    <string name="service_history_detail">Detail Service History</string>
+    <string name="emergency">Emergency</string>
+
+    <string name="title_booking_service">Booking Service</string>
+    <string name="title_unit">Unit</string>
+    <string name="title_service_history">Service History</string>
+    <string name="title_detail_service_history">Detail Service History</string>
+    <string name="title_emergency">Emergency</string>
+    <string name="title_test_drive">Test Drive</string>
+    <string name="title_vehicle">Car Hyundai</string>
+    <string name="title_dealer_hyundai">Dealer Hyundai</string>
+    <string name="title_account">Account</string>
+    <string name="title_inbox">Inbox</string>
+    <string name="title_news">News</string>
+    <string name="title_promotion">Promotion</string>
+    <string name="title_maintenance_service">Maintenance Service</string>
+    <string name="title_history_booking">History Booking</string>
+    <string name="title_history_booking_detail">History Booking Detail</string>
+    <string name="title_about">About</string>
+    <string name="title_setting_password">Setting Password</string>
+    <string name="title_search_chasis">Search Chasis</string>
+    <string name="title_forgot_password">Forgot Password</string>
+
+    <!--Menu-->
+    <string name="tombol_booking_now">Booking Now</string>
+    <string name="tombol_register_test_drive">Submit Test Drive</string>
+    <string name="tombol_order_booking_now">Order Booking Now</string>
+    <string name="tombol_cancel_booking">Cancel Booking</string>
+    <string name="tombol_detail_service_history">Detail Service History</string>
+    <string name="tombol_call_dealer_hyundai">Call Dealer Hyundai</string>
+    <string name="tombol_list_booking">List Booking</string>
+    <string name="tombol_promotions">Promotions</string>
+    <string name="tombol_panic">Panic Button</string>
+
+    <string name="unit">Unit</string>
+    <string name="list_unit">List Unit</string>
+    <string name="welcome">Welcome</string>
+    <string name="ketentuan_login">* Register by hyundai </string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="term_of_service">Term of Service</string>
+    <string name="lang_id">Ganti ke bahasa indonesia</string>
+    <string name="lang_en">Change to english</string>
+
+    <string name="navigation_drawer_open">Navigation Drawer Open</string>
+    <string name="navigation_drawer_close">Navigation Drawer Close</string>
+
+    <!--untuk login-->
+    <string name="usernameLogin">Username (Email)</string>
+    <string name="password">Password</string>
+    <string name="booking_service">Booking Service</string>
+    <string name="hyundai_iCare">Hyundai iCare</string>
+    <string name="hyundai_logo">Hyundai Logo</string>
+
+    <!--untuk tombol-->
+    <string name="ok">OK</string>
+    <string name="register_account">Register</string>
+    <string name="register_account_sukses">Register Account</string>
+    <string name="register_account_sukses_deskripsi">Please check email to activation</string>
+    <string name="not_have_account">Not have account? </string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="sign_up_now"> Sign up now</string>
+    <string name="submit_register_account">Submit Register</string>
+    <string name="submit_forgot_password">Submit Forgot Password</string>
+    <string name="save">Save</string>
+    <string name="search">Search</string>
+    <string name="update">Update</string>
+    <string name="updateAvailable">Check for Update</string>
+    <string name="saveNewPassword">Change Password</string>
+    <string name="test_drive">Test Drive</string>
+    <string name="test_drive_deskripsi_order">Silahkan Datang sesuai jadwal test drive</string>
+    <string name="search_chasis">Search Chasis</string>
+    <string name="visit_us">Visit Us</string>
+    <string name="deskripsi_emergency">Layanan bantuan (asistensi) teknisi 24 jam</string>
+    <string name="call_emergency">Call Hyundai RSA</string>
+    <string name="send_map_emergency">Emergency Service</string>
+    <string name="notif_send_map_emergency">Kami akan segera menghubungi anda</string>
+
+    <!--untuk form-->
+    <string name="example">* Ex. Ganti Oli</string>
+    <string name="search_hint">Search</string>
+    <string name="harus_diisi">*</string>
+    <string name="kosong">-</string>
+    <string name="keterangan_date">*Booking min H+2 max H+14 from time Booking.</string>
+    <string name="keterangan_time">*Mohon datang 30 menit sebelumnya.</string>
+    <string name="input_branch">Branch</string>
+    <string name="input_chasis">Chasis</string>
+    <string name="input_nama">Name</string>
+    <string name="form_input_booking_now">Form Booking Service</string>
+    <string name="form_input_test_drive">Form Test Drive</string>
+
+    <!--form input-->
+    <string name="detail_unit">Detail Unit</string>
+    <string name="detail_account">Detail Account</string>
+    <string name="chasis">Chasis No.</string>
+    <string name="engine">Engine No.</string>
+    <string name="police">Police No.</string>
+    <string name="model">Model</string>
+    <string name="colour">Colour</string>
+
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="phone">Phone</string>
+    <string name="mobile">Mobile Phone</string>
+    <string name="email">Email</string>
+
+    <!--untuk table-->
+    <string name="nomor">No.</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="dealer">Dealer</string>
+    <string name="remarks">Remarks</string>
+    <string name="note">Note</string>
+    <string name="data_not_found">Data Not Found</string>
+
+    <!--untuk Maps-->
+    <string name="map_type_normal">Type Normal</string>
+    <string name="map_type_terrain">Type Terrain</string>
+    <string name="map_type_satellite">Type Satellite</string>
+    <string name="map_type_hybrid">Type Hybrid</string>
+
+    <!--untuk bottom nav button list booking-->
+    <string name="kode_booking">Booking Code</string>
+    <string name="sukses_booking">Booking Seccess</string>
+    <string name="sukses_deskripsi_booking">Silahkan Datang sesuai jadwal booking atau periksa order di halaman history booking service</string>
+    <string name="status_booking">Booking Status</string>
+    <string name="status_progress">PROGRESS</string>
+    <string name="status_completed">COMPLETE</string>
+    <string name="title_activity_list_booking">ListBooking</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="webHyundai">http://www.hyundaimobil.co.id</string>
+    <string name="webHyvisionHyundai">https://www.hyvision-hyundaimobil.com</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="instagram">Instagram</string>
+    <string name="youtube">Youtube</string>
+
+    <string name="usercode">Username</string>
+    <string name="fullname">Fullname</string>
+    <string name="passwordLama">Current Password</string>
+    <string name="passwordBaru">New Password</string>
+    <string name="passwordBaru2">Re-Type New Password</string>
+
+    <!--service-->
+    <string name="header_wo">WO</string>
+    <string name="header_wo_date">WO Date</string>
+    <string name="header_repair_code">Repair Code</string>
+    <string name="header_description">Description</string>
+
+    <!--detail service-->
+    <string name="det_serv_dealer">Dealer : </string>
+    <string name="det_serv_company_branch">Company | Branch : </string>
+    <string name="det_serv_wo_doang">WO : </string>
+    <string name="det_serv_wo_no">Work Order No. : </string>
+    <string name="det_serv_wo_date">WO Date : </string>
+    <string name="det_serv_trans">Transaction No. : </string>
+    <string name="det_serv_repair_code">Repair Code : </string>
+    <string name="det_serv_repair_mode_code">Repair Mode Code : </string>
+    <string name="det_serv_description">Description : </string>
+    <string name="det_serv_repair_qty">Repair Qty : </string>
+    <string name="det_serv_init_paid_by_beban">Init. Paid By (Beban) : </string>
+    <string name="det_serv_sales_price">Sales Price (Rp.) : </string>
+    <string name="det_serv_discount">Discount (Rp.) : </string>
+    <string name="det_serv_total_amount">Total Amount (Rp.) : </string>
+    <string name="det_serv_sa">Service Advisor : </string>
+    <string name="det_serv_technism">Technician : </string>
+    <string name="det_serv_km_in">Odo KM : </string>
+    <string name="det_serv_note">Note : </string>
+
+    <!--bahasa indonesia-->
+    <string name="account">Akun</string>
+    <string name="inbox">Inbox</string>
+    <string name="settingPassword">Pengaturan Keamanan</string>
+    <string name="about">Tentang</string>
+    <string name="logout">Keluar</string>
+    <string name="login">Masuk</string>
+    <string name="versiApp">Versi</string>
+
+    <string name="input_dealer">Dealer</string>
+    <string name="input_unit">Unit</string>
+    <string name="input_date">Tanggal</string>
+    <string name="input_time">Jam</string>
+    <string name="input_maintenance_service">Layanan Pemeliharaan</string>
+    <string name="input_remarks">Catatan</string>
+    <!--test drive-->
+    <string name="input_name">Nama</string>
+    <string name="input_phone">Telp</string>
+    <string name="input_email">Email</string>
+    <string name="input_note">Catatan</string>
+    <string name="input_vehicle">Pilih Mobil</string>
+    <string name="keterangan_date_test_drive">*Test Drive minimal H+1 dari waktu order.</string>
+    <string name="keterangan_date_booking_service">*Booking Service minimal H+2 dari waktu order.</string>
+
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=E6:C5:EB:81:67:CB:84:07:E2:14:30:A2:83:C4:64:63:F7:BF:7B:E2%3Bcom.hyundaimobil.mapsapp2
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    E6:C5:EB:81:67:CB:84:07:E2:14:30:A2:83:C4:64:63:F7:BF:7B:E2
+
+    SHA-1 certificate fingerprint:
+    E6:C5:EB:81:67:CB:84:07:E2:14:30:A2:83:C4:64:63:F7:BF:7B:E2
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    last booking service api. AIzaSyA4GuAvocHQw0jqAWX3PKIGiKGffDsrjMs
+    new booking service api. AIzaSyAjm8LzoOPxn7bCooXMKyZufMUHaOnv5_E
+    -->
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAjm8LzoOPxn7bCooXMKyZufMUHaOnv5_E</string>
+</resources>

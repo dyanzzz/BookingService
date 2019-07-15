@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/list_item_booking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        card_view:cardBackgroundColor="@color/cardview_light_background"
+        card_view:cardCornerRadius="3dp"
+        card_view:cardElevation="2.5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <!--<com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/image"
+                android:layout_width="100dp"
+                android:layout_height="75dp"
+                android:layout_alignParentEnd="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY" />-->
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="100dp"
+                android:layout_height="75dp"
+                android:layout_alignParentEnd="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/hyundai_logo" />
+
+            <TextView
+                android:id="@+id/nomor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/icon"
+                android:text="@string/nomor"
+                android:textColor="@color/colorLine" />
+
+            <TextView
+                android:id="@+id/nama_kendaraan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="false"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/nomor"
+                android:text="@string/model"
+                android:textColor="@color/colorLine"
+                tools:ignore="RelativeOverlap" />
+
+            <TextView
+                android:id="@+id/kd_kendaraan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

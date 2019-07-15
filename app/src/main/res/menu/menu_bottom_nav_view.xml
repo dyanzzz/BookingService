@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/booking_service"
+        android:enabled="true"
+        android:icon="@drawable/date_white"
+        android:title="@string/booking_service"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/service_history"
+        android:enabled="true"
+        android:icon="@drawable/history_white"
+        android:title="@string/service_history"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/emergency"
+        android:color="@color/holo_red_dark"
+        android:enabled="true"
+        android:icon="@drawable/call_white"
+        android:title="@string/emergency"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/test_drive"
+        android:enabled="true"
+        android:icon="@drawable/car_white"
+        android:title="@string/test_drive"
+        app:showAsAction="withText" />
+
+</menu>

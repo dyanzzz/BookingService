@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "478510537657",
+    "firebase_url": "https://hyundai-mobil-apps.firebaseio.com",
+    "project_id": "hyundai-mobil-apps",
+    "storage_bucket": "hyundai-mobil-apps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478510537657:android:e28d863f1b1fc6b6",
+        "android_client_info": {
+          "package_name": "com.hyundaimobil.bookingservice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478510537657-q2ih62d6ej948i34v4ub1t3k704h4als.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hyundaimobil.bookingservice",
+            "certificate_hash": "e6c5eb8167cb8407e21430a283c46463f7bf7be2"
+          }
+        },
+        {
+          "client_id": "478510537657-lg795sm421vejv01tvebro8qloar4tn5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hyundaimobil.bookingservice",
+            "certificate_hash": "87bac66499a3636df087c45304e27b663bf98f43"
+          }
+        },
+        {
+          "client_id": "478510537657-27t03cmhvmt38abcjp8nrmq79uq3f16m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAZLaKs8yIZdMkhVD-0FDP0DRB19PM1ic"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478510537657-27t03cmhvmt38abcjp8nrmq79uq3f16m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

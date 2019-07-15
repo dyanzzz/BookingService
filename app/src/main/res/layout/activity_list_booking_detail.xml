@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme"
+    tools:context=".ListBookingDetail">
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:theme="@style/AppTheme" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/titleKdBooking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
+                    android:text="@string/kode_booking" />
+
+                <TextView
+                    android:id="@+id/kdBooking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titleKdBooking"
+                    android:background="?android:attr/editTextBackground"
+                    android:text="@string/harus_diisi"
+                    android:textColor="@color/colorLine"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/titleStatusBooking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/titleKdBooking"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
+                    android:text="@string/status_booking" />
+                <!--
+                <ImageView
+                    android:id="@+id/statusBooking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/titleStatusBooking"
+                    android:layout_toStartOf="@+id/deskripsiStatusBooking"
+                    app:srcCompat="@mipmap/check_no"
+                    tools:ignore="ContentDescription" />
+                -->
+                <TextView
+                    android:id="@+id/deskripsiStatusBooking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/kdBooking"
+                    android:layout_below="@+id/titleStatusBooking"
+                    android:background="?android:attr/editTextBackground"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
+                    android:text="@string/harus_diisi"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/colorLine"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/titleDealer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/kdBooking"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
+                    android:text="@string/input_dealer" />
+
+                <TextView
+                    android:id="@+id/dealer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titleDealer"
+                    android:background="?android:attr/editTextBackground"
+                    android:text="@string/harus_diisi"
+                    android:textColor="@color/colorLine"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/titleDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dealer"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
+                    android:text="@string/input_date" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titleDate"
+                    android:background="?android:attr/editTextBackground"
+                    android:text="@string/harus_diisi"
+                    android:textColor="@color/colorLine"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/titleTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/titleDate"
+                    android:layout_alignEnd="@+id/dealer"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
+                    android:text="@string/input_time"
+                    android:textAlignment="textEnd" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/date"
+                    android:layout_alignEnd="@+id/dealer"
+                    android:background="?android:attr/editTextBackground"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
+                    android:text="@string/harus_diisi"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/colorLine"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/titleRemarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/date"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
+                    android:text="@string/input_maintenance_service" />
+
+                <TextView
+                    android:id="@+id/remarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titleRemarks"
+                    android:background="?android:attr/editTextBackground"
+                    android:gravity="start"
+                    android:text="@string/harus_diisi"
+                    android:textColor="@color/colorLine"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/titleNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/remarks"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
+                    android:text="@string/input_note" />
+
+                <TextView
+                    android:id="@+id/note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titleNote"
+                    android:background="?android:attr/editTextBackground"
+                    android:gravity="start"
+                    android:minLines="2"
+                    android:text="@string/harus_diisi"
+                    android:textColor="@color/colorLine"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

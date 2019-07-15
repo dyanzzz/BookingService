@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormBooking"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/tombol"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/label_dealer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="5dp"
+                android:paddingStart="10dp"
+                android:text="@string/input_dealer" />
+
+            <EditText
+                android:id="@+id/input_dealer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@android:drawable/ic_menu_search"
+                android:editable="false"
+                android:ems="10"
+                android:hint="@string/harus_diisi"
+                android:onClick="cariDealer"
+                android:padding="10dp"
+                android:textColor="@color/colorLine"
+                tools:ignore="Deprecated,TextFields" />
+
+            <EditText
+                android:id="@+id/kode_dealer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:ignore="LabelFor,TextFields" />
+
+            <EditText
+                android:id="@+id/coy_dealer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:ignore="LabelFor,TextFields" />
+
+
+            <TextView
+                android:id="@+id/label_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="5dp"
+                android:paddingStart="10dp"
+                android:text="@string/unit" />
+
+            <EditText
+                android:id="@+id/input_nopol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@android:drawable/ic_menu_search"
+                android:editable="false"
+                tools:ignore="Deprecated,TextFields"
+                android:ems="10"
+                android:hint="@string/harus_diisi"
+                android:textColor="@color/colorLine"
+                android:onClick="cariUnit"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/input_chasis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:ignore="LabelFor,TextFields" />
+
+            <EditText
+                android:id="@+id/input_engine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:ignore="LabelFor,TextFields" />
+
+            <EditText
+                android:id="@+id/input_kd_customer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:ignore="LabelFor,TextFields" />
+
+
+            <TextView
+                android:id="@+id/label_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="5dp"
+                android:paddingStart="10dp"
+                android:text="@string/input_date" />
+
+            <EditText
+                android:id="@+id/input_tgl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@android:drawable/ic_menu_today"
+                android:editable="false"
+                tools:ignore="Deprecated,TextFields"
+                android:ems="10"
+                android:hint="@string/harus_diisi"
+                android:textColor="@color/colorLine"
+                android:onClick="setDate"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/label_keterangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingEnd="5dp"
+                android:paddingStart="10dp"
+                android:text="@string/keterangan_date_booking_service"
+                android:textColor="@color/colorLine" />
+
+            <TextView
+                android:id="@+id/label_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="5dp"
+                android:paddingStart="10dp"
+                android:text="@string/input_time" />
+
+            <EditText
+                android:id="@+id/input_jam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@android:drawable/ic_menu_recent_history"
+                android:editable="false"
+                tools:ignore="Deprecated,TextFields"
+                android:ems="10"
+                android:hint="@string/harus_diisi"
+                android:textColor="@color/colorLine"
+                android:onClick="setTime"
+                android:padding="10dp" />
+
+
+            <TextView
+                android:id="@+id/label_maintenance_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="5dp"
+                android:paddingStart="10dp"
+                android:text="@string/input_maintenance_service" />
+
+            <EditText
+                android:id="@+id/input_maintenance_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@android:drawable/ic_menu_info_details"
+                android:editable="false"
+                tools:ignore="Deprecated,TextFields"
+                android:ems="10"
+                android:textColor="@color/colorLine"
+                android:hint="@string/harus_diisi"
+                android:onClick="cariMaintenance"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/lts_coy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:ignore="LabelFor,TextFields" />
+
+            <EditText
+                android:id="@+id/lts_kd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:ignore="LabelFor,TextFields" />
+
+
+            <TextView
+                android:id="@+id/label_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="5dp"
+                android:paddingStart="10dp"
+                android:text="@string/input_remarks" />
+
+            <EditText
+                android:id="@+id/input_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textColor="@color/colorLine"
+                android:hint="@string/example"
+                android:inputType="text"
+                android:padding="10dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/tombol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/buttonSave"
+            style="@style/btnStyleBrown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/history_booking"
+            android:drawableEnd="@android:drawable/ic_menu_save"
+            android:text="@string/tombol_booking_now" />
+
+        <ImageView
+            android:id="@+id/history_booking"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@android:drawable/editbox_background"
+            android:contentDescription="@string/history_booking"
+            android:onClick="btn_historyBooking"
+            android:src="@drawable/tombol_history_service" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/list_item_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        card_view:cardCornerRadius="3dp"
+        card_view:cardElevation="2.5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <TextView
+                android:id="@+id/no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/icon"
+                android:text="@string/nomor"
+                android:textColor="@color/colorLine"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/wo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="false"
+                android:layout_toEndOf="@+id/no"
+                android:text="@string/header_wo"
+                android:textColor="@color/colorLine"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/woDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/wo"
+                android:layout_alignParentEnd="true"
+                android:text="@string/header_wo_date"
+                android:textSize="14sp"
+                tools:ignore="RelativeOverlap" />
+
+            <TextView
+                android:id="@+id/tvRepairCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wo"
+                android:text="@string/det_serv_repair_code"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/repairCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wo"
+                android:layout_toEndOf="@id/tvRepairCode"
+                android:text="@string/header_repair_code"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/repairCode"
+                android:layout_toEndOf="@id/tvDescription"
+                android:text="@string/header_description"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
+
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/editTextBackground"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:id="@+id/tableRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/no"
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nomor"
+                    android:textAlignment="center"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/wo"
+                    android:layout_width="52dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header_wo"
+                    android:textAlignment="center"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/woDate"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header_wo_date"
+                    android:textAlignment="center"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/repairCode"
+                    android:layout_width="38dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header_repair_code"
+                    android:textAlignment="center"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header_description"
+                    android:textAlignment="textStart"
+                    android:textSize="11sp" />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+    -->

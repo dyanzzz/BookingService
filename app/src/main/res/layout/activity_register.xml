@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    android:background="@drawable/gradiant">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hyundai_logo"
+        android:src="@drawable/register" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hyundai_logo"
+        app:srcCompat="@drawable/footer" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_margin="15dp">
+
+        <ImageView
+            android:id="@+id/imageBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/hyundai_logo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/card1" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layoutNama"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/editTextNama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:hint="@string/name"
+                    android:inputType="textCapCharacters"
+                    android:padding="10dp"
+                    android:textColor="@color/colorLine" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layoutEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:drawableEnd="@android:drawable/ic_dialog_email"
+                    android:ems="10"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:textColor="@color/colorLine" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layoutPhone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/editTextPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:drawableEnd="@android:drawable/ic_menu_call"
+                    android:ems="10"
+                    android:hint="@string/phone"
+                    android:inputType="phone"
+                    android:padding="10dp"
+                    android:textColor="@color/colorLine" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layoutChasis"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/editTextChasis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:drawableEnd="@android:drawable/ic_menu_search"
+                    android:editable="false"
+                    android:ems="10"
+                    android:hint="@string/chasis"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:textColor="@color/colorLine"
+                    tools:ignore="Deprecated,TextFields" />
+            </android.support.design.widget.TextInputLayout>
+
+            <EditText
+                android:id="@+id/editTextEngine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:visibility="gone"
+                tools:ignore="LabelFor,Deprecated,TextFields" />
+            <EditText
+                android:id="@+id/editTextNopol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:visibility="gone"
+                tools:ignore="LabelFor,Deprecated,TextFields" />
+            <EditText
+                android:id="@+id/editTextType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:visibility="gone"
+                tools:ignore="LabelFor,Deprecated,TextFields" />
+            <EditText
+                android:id="@+id/editTextColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:visibility="gone"
+                tools:ignore="LabelFor,Deprecated,TextFields" />
+
+            <Button
+                android:id="@+id/buttonRegister"
+                style="@style/btnStyleBrown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="@string/submit_register_account" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hyundaimobil.bookingservice">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+
+    <permission
+        android:name="com.hyundaimobil.bookingservice.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.hyundaimobil.bookingservice.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permissions.READ_GSERVICES" />
+
+    <!--
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    -->
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".app.AppController"
+        android:allowBackup="false"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/hyundailogo_h_white"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="MAINACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LoginPassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FormBooking"
+            android:label="@string/title_booking_service"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Account"
+            android:label="@string/title_account"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Unit"
+            android:label="@string/title_unit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ListDealerMaps"
+            android:label="@string/title_dealer_hyundai"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ListBookingDetail"
+            android:label="@string/title_history_booking_detail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".About"
+            android:label="@string/title_about"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SettingPassword"
+            android:label="@string/title_setting_password"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PromotionsDetail"
+            android:label="@string/title_promotion"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HistoryBooking"
+            android:label="@string/title_history_booking"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DetailNews"
+            android:label="@string/title_news"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ServiceHistory"
+            android:label="@string/title_service_history"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ServiceHistoryDetail"
+            android:label="@string/title_detail_service_history"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FormTestDrive"
+            android:label="@string/title_test_drive"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Emergency"
+            android:label="@string/title_emergency"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TipeKendaraan"
+            android:label="@string/title_vehicle"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ListMaintenanceService"
+            android:label="@string/title_maintenance_service"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterListChasis"
+            android:label="@string/title_search_chasis"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PilihUnit"
+            android:label="@string/title_unit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForgotPassword"
+            android:label="@string/title_forgot_password"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Promotions"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ListBooking"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FormBookingSukses"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PickupCustomerMaps"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EmergencySukses"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FormTestDriveSukses"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Register"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RegisterSukses"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ForgotPasswordSukses"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Inbox"
+            android:label="@string/title_inbox"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="INBOX" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".InboxDetail"
+            android:label="@string/title_inbox"
+            android:screenOrientation="portrait"/>
+
+
+        <!-- [START fcm_default_icon] -->
+        <!--
+             Set custom default icon. This is used when no icon is set for incoming notification messages.
+             See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/hyundailogo_h_white" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <!-- [END fcm_default_icon] -->
+
+
+        <!-- [START firebase_iid_service] -->
+        <service android:name=".app.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- [END firebase_iid_service] -->
+        <!-- [START firebase_service] -->
+        <service android:name=".app.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- [END firebase_service] -->
+
+
+
+    </application>
+
+</manifest>
