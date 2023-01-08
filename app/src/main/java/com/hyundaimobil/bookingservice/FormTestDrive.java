@@ -13,8 +13,11 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -326,7 +329,7 @@ public class FormTestDrive extends AppCompatActivity implements View.OnClickList
         }
 
         datePickerDialog.vibrate(true); //vibrate on choosing date?
-        datePickerDialog.show( getFragmentManager(), "DatePickerDialog" );
+        datePickerDialog.show(getSupportFragmentManager(), "DatePickerDialog");
     }
 
     private Calendar dateToCalendar(Date date) {
@@ -436,7 +439,7 @@ public class FormTestDrive extends AppCompatActivity implements View.OnClickList
             }
         });
         */
-        timepickerdialog.show(getFragmentManager(), "Timepickerdialog"); //show time picker dialog
+        timepickerdialog.show(getSupportFragmentManager(), "Timepickerdialog"); //show time picker dialog
 
     }
 

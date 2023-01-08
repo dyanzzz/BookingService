@@ -40,7 +40,7 @@
         android:layout_above="@+id/buttonOk"
         android:layout_below="@+id/text_sukses"
         android:fontFamily="serif"
-        android:gravity="center_vertical"
+        android:gravity="center_vertical|center_horizontal"
         android:text="@string/register_account_sukses_deskripsi"
         android:textAlignment="center"
         android:textColor="@color/cardview_light_background"

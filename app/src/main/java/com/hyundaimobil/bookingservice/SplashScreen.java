@@ -6,20 +6,21 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.ProgressBar;
 
 import com.hyundaimobil.bookingservice.app.Config;
 
-import fr.castorflex.android.smoothprogressbar.SmoothProgressBar;
-import fr.castorflex.android.smoothprogressbar.SmoothProgressDrawable;
-
 public class SplashScreen extends AppCompatActivity {
 
     ProgressBar mProgressBar1;
-    private SmoothProgressBar mGoogleNow;
-    private SmoothProgressBar mPocketBar;
+    //private SmoothProgressBar mGoogleNow;
+    //private SmoothProgressBar mPocketBar;
 
     protected LocationManager locationManager;
 
@@ -32,11 +33,11 @@ public class SplashScreen extends AppCompatActivity {
         //mPocketBar = findViewById(R.id.pocket);
         //mGoogleNow = findViewById(R.id.google_now);
 
-        mProgressBar1.setIndeterminateDrawable(
+        /*mProgressBar1.setIndeterminateDrawable(
                 new SmoothProgressDrawable.Builder(
                         SplashScreen.this
                 ).interpolator(new AccelerateInterpolator()).build()
-        );
+        );*/
         /*
         mPocketBar.setSmoothProgressDrawableBackgroundDrawable(
                 SmoothProgressBarUtils.generateDrawableWithColors(

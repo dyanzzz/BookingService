@@ -30,20 +30,20 @@
 #-keep class org.simpleframework.** { *; }
 #-keepattributes Signature, *Annotation*
 # Picasso
--dontwarn com.squareup.okhttp.**
--dontwarn org.conscrypt**
--dontwarn org.codehaus.mojo.**
+#-dontwarn com.squareup.okhttp.**
+#-dontwarn org.conscrypt**
+#-dontwarn org.codehaus.mojo.**
 
 #-keep class com.firebase.** { *; }
 #-keep class org.apache.** { *; }
 #-keepnames class com.fasterxml.jackson.** { *; }
 #-keepnames class javax.servlet.** { *; }
 #-keepnames class org.ietf.jgss.** { *; }
--dontwarn org.apache.**
+#-dontwarn org.apache.**
 #-dontwarn org.w3c.dom.**
--keepclassmembers class android.support.design.internal.BottomNavigationMenuView {
-    boolean mShiftingMode;
-}
+#-keepclassmembers class android.support.design.internal.BottomNavigationMenuView {
+#    boolean mShiftingMode;
+#}
 #-assumenosideeffects class android.util.Log {
 #    public static boolean isLoggable(java.lang.String, int);
 #    public static int d(...);

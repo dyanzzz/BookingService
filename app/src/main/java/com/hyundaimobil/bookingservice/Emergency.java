@@ -19,22 +19,20 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.hyundaimobil.bookingservice.app.Config;
 import com.hyundaimobil.bookingservice.app.ForceCloseDebugger;
 import com.hyundaimobil.bookingservice.app.RequestHandler;
 import com.hyundaimobil.bookingservice.app.SessionManager;
 import com.hyundaimobil.bookingservice.db.DatabaseHelper;
-
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
@@ -131,7 +129,7 @@ public class Emergency extends AppCompatActivity implements LocationListener {
             //startActivity(intent);
 
             //Creating an alert dialog to confirm logout
-            android.support.v7.app.AlertDialog.Builder alertDialogBuilder = new android.support.v7.app.AlertDialog.Builder(this);
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
             alertDialogBuilder.setMessage(Config.NOTIF_UMUM);
             alertDialogBuilder.setCancelable(false);
             alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -192,17 +190,13 @@ public class Emergency extends AppCompatActivity implements LocationListener {
             });
 
             //Showing the alert dialog
-            android.support.v7.app.AlertDialog alertDialog = alertDialogBuilder.create();
+            AlertDialog alertDialog = alertDialogBuilder.create();
             alertDialog.show();
 
         } else {
             showDialog(Config.TAMPIL_ERROR);
         }
     }
-
-
-
-
 
     void getLocation() {
         try {

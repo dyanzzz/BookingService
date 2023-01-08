@@ -13,8 +13,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,7 +24,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.hyundaimobil.bookingservice.app.Config;
 import com.hyundaimobil.bookingservice.app.ForceCloseDebugger;
 import com.hyundaimobil.bookingservice.app.RequestHandler;
@@ -31,11 +32,9 @@ import com.hyundaimobil.bookingservice.db.DatabaseHelper;
 import com.hyundaimobil.bookingservice.helper.LocaleHelper;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -305,7 +304,7 @@ public class FormBooking extends AppCompatActivity implements View.OnClickListen
         }
 
         datePickerDialog.vibrate(true); //vibrate on choosing date?
-        datePickerDialog.show( getFragmentManager(), "DatePickerDialog" );
+        datePickerDialog.show( getSupportFragmentManager(), "DatePickerDialog" );
     }
 
     private Calendar dateToCalendar(Date date) {
@@ -415,7 +414,7 @@ public class FormBooking extends AppCompatActivity implements View.OnClickListen
             }
         });
         */
-        timepickerdialog.show(getFragmentManager(), "Timepickerdialog"); //show time picker dialog
+        timepickerdialog.show(getSupportFragmentManager(), "Timepickerdialog"); //show time picker dialog
 
     }
 

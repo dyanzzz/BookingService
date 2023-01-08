@@ -55,7 +55,7 @@
         android:layout_above="@+id/buttonOk"
         android:layout_below="@+id/kode_order"
         android:fontFamily="serif"
-        android:gravity="center_vertical"
+        android:gravity="center_vertical|center_horizontal"
         android:text="@string/harus_diisi"
         android:textAlignment="center"
         android:textColor="@color/cardview_light_background"

@@ -15,13 +15,14 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.NavigationView;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.util.Base64;
 import android.util.Log;
 import android.view.Gravity;
@@ -45,6 +46,8 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.hyundaimobil.bookingservice.adapter.NewsAdapter;
 import com.hyundaimobil.bookingservice.app.AppController;
@@ -56,18 +59,15 @@ import com.hyundaimobil.bookingservice.data.NewsData;
 import com.hyundaimobil.bookingservice.db.DatabaseHelper;
 import com.hyundaimobil.bookingservice.helper.BottomNavigationViewHelper;
 import com.hyundaimobil.bookingservice.helper.LocaleHelper;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-
 import io.paperdb.Paper;
 
 public class MainActivity extends AppCompatActivity implements
@@ -472,122 +472,119 @@ public class MainActivity extends AppCompatActivity implements
 
 
         bottomNavigationView = findViewById(R.id.btn_nav);
-        BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.booking_service:
-                        if (Config.CEK_KONEKSI(MainActivity.this)) {
-                            if (versi_link_update.equals(Config.VALUE_VERSI)) {
+        //BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.booking_service:
+                    if (Config.CEK_KONEKSI(MainActivity.this)) {
+                        if (versi_link_update.equals(Config.VALUE_VERSI)) {
 
-                                String statusLogin = String.valueOf(session.isLoggedIn());
-                                if (statusLogin.equals("false")) {
-                                    Intent intent = new Intent(MainActivity.this, Login.class);
-                                    startActivity(intent);
-
-                                } else {
-                                    if (status_aktif_akun.equals("1")) {
-                                        Intent intent = new Intent(MainActivity.this, FormBooking.class);
-                                        startActivity(intent);
-                                    } else {
-                                        status_nonaktif_popup();
-                                    }
-                                }
+                            String statusLogin1 = String.valueOf(session.isLoggedIn());
+                            if (statusLogin1.equals("false")) {
+                                Intent intent = new Intent(MainActivity.this, Login.class);
+                                startActivity(intent);
 
                             } else {
-                                //Toast.makeText(MainActivity.this, Config.UPDATE_AVAILABLE, Toast.LENGTH_SHORT).show();
-                                update_popup();
+                                if (status_aktif_akun.equals("1")) {
+                                    Intent intent = new Intent(MainActivity.this, FormBooking.class);
+                                    startActivity(intent);
+                                } else {
+                                    status_nonaktif_popup();
+                                }
                             }
 
                         } else {
-                            showDialog(Config.TAMPIL_ERROR);
+                            //Toast.makeText(MainActivity.this, Config.UPDATE_AVAILABLE, Toast.LENGTH_SHORT).show();
+                            update_popup();
                         }
-                        break;
-                    case R.id.service_history:
-                        if (Config.CEK_KONEKSI(MainActivity.this)) {
-                            if (versi_link_update.equals(Config.VALUE_VERSI)) {
 
-                                String statusLogin = String.valueOf(session.isLoggedIn());
-                                if (statusLogin.equals("false")) {
-                                    Intent intent = new Intent(MainActivity.this, Login.class);
-                                    startActivity(intent);
-                                } else {
-                                    if (status_aktif_akun.equals("1")) {
-                                        Intent intent = new Intent(MainActivity.this, PilihUnit.class);
-                                        intent.putExtra(Config.TAG_ID, "3");
-                                        startActivity(intent);
+                    } else {
+                        showDialog(Config.TAMPIL_ERROR);
+                    }
+                    break;
+                case R.id.service_history:
+                    if (Config.CEK_KONEKSI(MainActivity.this)) {
+                        if (versi_link_update.equals(Config.VALUE_VERSI)) {
 
-                                    } else {
-                                        status_nonaktif_popup();
-                                    }
-                                }
-
+                            String statusLogin1 = String.valueOf(session.isLoggedIn());
+                            if (statusLogin1.equals("false")) {
+                                Intent intent = new Intent(MainActivity.this, Login.class);
+                                startActivity(intent);
                             } else {
-                                //Toast.makeText(MainActivity.this, Config.UPDATE_AVAILABLE, Toast.LENGTH_SHORT).show();
-                                update_popup();
+                                if (status_aktif_akun.equals("1")) {
+                                    Intent intent = new Intent(MainActivity.this, PilihUnit.class);
+                                    intent.putExtra(Config.TAG_ID, "3");
+                                    startActivity(intent);
+
+                                } else {
+                                    status_nonaktif_popup();
+                                }
                             }
 
                         } else {
-                            showDialog(Config.TAMPIL_ERROR);
+                            //Toast.makeText(MainActivity.this, Config.UPDATE_AVAILABLE, Toast.LENGTH_SHORT).show();
+                            update_popup();
                         }
-                        break;
-                    case R.id.emergency:
-                        if (Config.CEK_KONEKSI(MainActivity.this)) {
-                            if (versi_link_update.equals(Config.VALUE_VERSI)) {
 
-                                String statusLogin = String.valueOf(session.isLoggedIn());
-                                if (statusLogin.equals("false")) {
-                                    Intent intent = new Intent(MainActivity.this, Login.class);
+                    } else {
+                        showDialog(Config.TAMPIL_ERROR);
+                    }
+                    break;
+                case R.id.emergency:
+                    if (Config.CEK_KONEKSI(MainActivity.this)) {
+                        if (versi_link_update.equals(Config.VALUE_VERSI)) {
+
+                            String statusLogin1 = String.valueOf(session.isLoggedIn());
+                            if (statusLogin1.equals("false")) {
+                                Intent intent = new Intent(MainActivity.this, Login.class);
+                                startActivity(intent);
+                            } else {
+                                if (status_aktif_akun.equals("1")) {
+                                    Intent intent = new Intent(MainActivity.this, Emergency.class);
                                     startActivity(intent);
                                 } else {
-                                    if (status_aktif_akun.equals("1")) {
-                                        Intent intent = new Intent(MainActivity.this, Emergency.class);
-                                        startActivity(intent);
-                                    } else {
-                                        status_nonaktif_popup();
-                                    }
+                                    status_nonaktif_popup();
                                 }
-
-                            } else {
-                                //Toast.makeText(MainActivity.this, Config.UPDATE_AVAILABLE, Toast.LENGTH_SHORT).show();
-                                update_popup();
                             }
 
                         } else {
-                            showDialog(Config.TAMPIL_ERROR);
+                            //Toast.makeText(MainActivity.this, Config.UPDATE_AVAILABLE, Toast.LENGTH_SHORT).show();
+                            update_popup();
                         }
-                        break;
-                    case R.id.test_drive:
-                        if (Config.CEK_KONEKSI(MainActivity.this)) {
-                            if (versi_link_update.equals(Config.VALUE_VERSI)) {
-                                String statusLogin = String.valueOf(session.isLoggedIn());
-                                if (statusLogin.equals("true")) {
-                                    if (status_aktif_akun.equals("1")) {
 
-                                        Intent intent = new Intent(MainActivity.this, FormTestDrive.class);
-                                        startActivity(intent);
+                    } else {
+                        showDialog(Config.TAMPIL_ERROR);
+                    }
+                    break;
+                case R.id.test_drive:
+                    if (Config.CEK_KONEKSI(MainActivity.this)) {
+                        if (versi_link_update.equals(Config.VALUE_VERSI)) {
+                            String statusLogin1 = String.valueOf(session.isLoggedIn());
+                            if (statusLogin1.equals("true")) {
+                                if (status_aktif_akun.equals("1")) {
 
-                                    } else {
-                                        status_nonaktif_popup();
-                                    }
-                                } else {
                                     Intent intent = new Intent(MainActivity.this, FormTestDrive.class);
                                     startActivity(intent);
+
+                                } else {
+                                    status_nonaktif_popup();
                                 }
                             } else {
-                                //Toast.makeText(MainActivity.this, Config.UPDATE_AVAILABLE, Toast.LENGTH_SHORT).show();
-                                update_popup();
+                                Intent intent = new Intent(MainActivity.this, FormTestDrive.class);
+                                startActivity(intent);
                             }
-
                         } else {
-                            showDialog(Config.TAMPIL_ERROR);
+                            //Toast.makeText(MainActivity.this, Config.UPDATE_AVAILABLE, Toast.LENGTH_SHORT).show();
+                            update_popup();
                         }
-                        break;
-                }
 
-                return true;
+                    } else {
+                        showDialog(Config.TAMPIL_ERROR);
+                    }
+                    break;
             }
+
+            return true;
         });
         bottomNavigationView.setItemIconTintList(null);
 
@@ -932,7 +929,7 @@ public class MainActivity extends AppCompatActivity implements
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         switch (menuItem.getItemId()) {
             case R.id.list_toolbar:
-                drawerLayout.openDrawer(Gravity.END);
+                drawerLayout.openDrawer(Gravity.RIGHT);
                 return true;
 
             default:
@@ -998,7 +995,7 @@ public class MainActivity extends AppCompatActivity implements
         }
 
         //Creating an alert dialog to confirm logout
-        android.support.v7.app.AlertDialog.Builder alertDialogBuilder = new android.support.v7.app.AlertDialog.Builder(this);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setMessage(Config.NOTIF_LOGOUT);
         alertDialogBuilder.setCancelable(false);
         alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -1018,14 +1015,14 @@ public class MainActivity extends AppCompatActivity implements
         });
 
         //Showing the alert dialog
-        android.support.v7.app.AlertDialog alertDialog = alertDialogBuilder.create();
+        AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
 
     //update popup function
     private void update_popup() {
         //Creating an alert dialog to confirm
-        android.support.v7.app.AlertDialog.Builder alertDialogBuilder = new android.support.v7.app.AlertDialog.Builder(this);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         //alertDialogBuilder.setTitle(Config.UPDATE_AVAILABLE);
         alertDialogBuilder.setMessage(message_link_update);
         alertDialogBuilder.setCancelable(false);
@@ -1044,13 +1041,13 @@ public class MainActivity extends AppCompatActivity implements
         });
 
         //Showing the alert dialog
-        android.support.v7.app.AlertDialog alertDialog = alertDialogBuilder.create();
+        AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
 
     private void status_nonaktif_popup() {
         //Creating an alert dialog to confirm
-        android.support.v7.app.AlertDialog.Builder alertDialogBuilder = new android.support.v7.app.AlertDialog.Builder(this);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setMessage("Sorry, your account is inactive");
         alertDialogBuilder.setCancelable(false);
         alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -1060,12 +1057,12 @@ public class MainActivity extends AppCompatActivity implements
         });
 
         //Showing the alert dialog
-        android.support.v7.app.AlertDialog alertDialog = alertDialogBuilder.create();
+        AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
 
     public void onBackPressed() {
-        android.support.v7.app.AlertDialog.Builder alertDialogBuilder = new android.support.v7.app.AlertDialog.Builder(this);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setMessage(Config.NOTIF_EXIT);
         alertDialogBuilder.setCancelable(false);
         alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -1088,7 +1085,7 @@ public class MainActivity extends AppCompatActivity implements
         });
 
         //Showing the alert dialog
-        android.support.v7.app.AlertDialog alertDialog = alertDialogBuilder.create();
+        AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
 

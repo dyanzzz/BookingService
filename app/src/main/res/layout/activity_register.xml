@@ -52,7 +52,7 @@
             android:layout_marginTop="30dp"
             android:orientation="vertical">
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layoutNama"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -71,9 +71,9 @@
                     android:inputType="textCapCharacters"
                     android:padding="10dp"
                     android:textColor="@color/colorLine" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layoutEmail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -93,9 +93,9 @@
                     android:inputType="textEmailAddress"
                     android:padding="10dp"
                     android:textColor="@color/colorLine" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layoutPhone"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -115,9 +115,9 @@
                     android:inputType="phone"
                     android:padding="10dp"
                     android:textColor="@color/colorLine" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layoutChasis"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -139,7 +139,7 @@
                     android:padding="10dp"
                     android:textColor="@color/colorLine"
                     tools:ignore="Deprecated,TextFields" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <EditText
                 android:id="@+id/editTextEngine"
